@@ -1,0 +1,4 @@
+MONGO_URI = mongodb+srv://admin-1234:admin@usercluster.ygl3d.mongodb.net/shop?retryWrites=true&w=majority
+
+database name = shop
+collection name = products
