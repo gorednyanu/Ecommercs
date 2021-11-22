@@ -7,7 +7,7 @@ import { addToCart } from "../Redux/actions/cartActions";
 
 
 const ProductScreen = ({ match, history }) => {
-  const [qty, setQty] = useState(1);
+  const [qty,setQty] = useState(1);
   const dispatch = useDispatch();
 
   const productDetails = useSelector((state) => state.getProductDetails);
@@ -56,13 +56,11 @@ const ProductScreen = ({ match, history }) => {
               </p>
               <p>
                 Qty:
-                <select value={qty} onChange={(e) => setQty(e.target.value)}>
-                  {[...Array(product.countInStock).keys()].map((x)=>(
-                    <option key={x+1} value={x+1}>
-                      {x+1}
+                <select>
+                    <option>
+                     {product.countInStock}
                     </option>
-                  ))}
-                </select> 
+                </select>
               </p>
               <p>
                 <button type="button" onClick={addToCartHandler}>
